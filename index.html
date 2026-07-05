@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>PRESCOT LED • Złączki i Akcesoria Instalacyjne • Katalog B2B 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    },
+                    colors: {
+                        'prescot-orange': '#E14E26',
+                        'prescot-dark': '#354956'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+        }
+        body {
+            scroll-behavior: smooth;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; }
+        }
+        main table {
+            font-size: 0.92rem !important;
+            line-height: 1.35;
+        }
+        main thead th {
+            font-size: 0.72rem !important;
+            padding-bottom: 0.95rem !important;
+            color: #64748b !important;
+        }
+        main tbody td {
+            font-size: 0.92rem !important;
+            padding-top: 0.9rem !important;
+            padding-bottom: 0.9rem !important;
+            vertical-align: middle;
+        }
+        main tbody td:first-child {
+            width: 6.25rem;
+        }
+        .product-thumb { width: 72px; height: 54px; display: grid; place-items: center; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .product-thumb:hover { border-color: #E14E26; }
+        .product-thumb img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.2s; }
+        .product-thumb:hover img { transform: scale(1.1); }
+        main table th:first-child, main table td:first-child { width: 92px; }
+
+        /* Lightbox Styles */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.25s ease-in-out;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 85vh;
+            background: white;
+            padding: 16px;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .lightbox-overlay.active .lightbox-content {
+            transform: scale(1);
+        }
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: -16px;
+            right: -16px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+            color: #475569;
+        }
+        .lightbox-close:hover {
+            background: #f1f5f9;
+            transform: scale(1.1);
+            color: #0f172a;
+        }
+        .lightbox-caption {
+            text-align: center;
+            margin-top: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #1e293b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body class="bg-[#F6F8F9] text-gray-800 antialiased font-sans">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md border-b border-gray-200/60 z-50 no-print">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a class="flex items-center gap-3" href="#">
+                <img alt="PRESCOT Logo" class="h-6" src="assets/logo_dark.svg"/>
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-400 border-l border-gray-200 pl-3">Akcesoria LED</span>
+            </a>
+            
+            <nav class="hidden lg:flex gap-6 text-xs font-semibold text-gray-500">
+                <a class="hover:text-prescot-orange transition-colors" href="#zlaczki-do-tasm-led">Złączki LED</a>
+                <a class="hover:text-prescot-orange transition-colors" href="#zasilanie-i-rozgalezniki-dc">Kable DC</a>
+                <a class="hover:text-prescot-orange transition-colors" href="#kable-i-szybkozlaczki">Złączki Klik</a>
+                <a class="hover:text-prescot-orange transition-colors" href="#przyciski-i-wlaczniki">Włączniki</a>
+                <a class="hover:text-prescot-orange transition-colors" href="#zlaczki-hermetyczne-ip68">Złącza IP68</a>
+            </nav>
+            
+            <button class="bg-prescot-orange hover:bg-prescot-orange-hover text-white text-xs font-bold px-4 py-2.5 rounded-lg transition-all shadow-md" onclick="window.print()">
+                Drukuj Katalog (PDF)
+            </button>
+        </div>
+    </header>
+
+    <!-- COMPACT BRAND BANNER -->
+    <section class="relative bg-white border-b border-gray-200 py-12 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-[0.02]">
+            <img src="assets/cover.png" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+                <h1 class="text-4xl font-black text-gray-900 leading-none uppercase tracking-tight">
+                    Osprzęt i Złączki <span class="text-prescot-orange">LED</span>
+                </h1>
+            </div>
+            <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 p-3 rounded-xl no-print">
+                <div class="w-10 h-10 rounded-lg bg-prescot-orange/10 flex items-center justify-center text-prescot-orange font-bold font-sans">2026</div>
+                <div class="text-xs">
+                    <div class="font-bold text-gray-900">Aktualne wydanie</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN PRODUCTS -->
+    <main class="py-8">
+        
+        <section id="zlaczki-do-tasm-led" class="py-12 border-b border-gray-100 scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-10 border-l-4 border-prescot-orange pl-6">
+                    <h2 class="text-3xl font-extrabold text-gray-900 uppercase tracking-tight">Złączki do taśm LED</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-10">
+        
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ZŁĄCZKI DO TAŚM LED / SERIA BASIC</h3>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">1</span>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Nr katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Połączenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Przewód</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-MONO-8MM-TP" src="assets/k2018/basic_mono_1.png"/></div></td><td class="font-bold text-slate-900">ZL-MONO-8MM-TP</td><td>8mm</td><td>14cm</td><td>-</td><td>2x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-MONO-8MM-TPT" src="assets/k2018/basic_mono_2.png"/></div></td><td class="font-bold text-slate-900">ZL-MONO-8MM-TPT</td><td>8mm</td><td>14cm</td><td>8mm</td><td>2x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-MONO-8MM-TT" src="assets/k2018/basic_mono_3.png"/></div></td><td class="font-bold text-slate-900">ZL-MONO-8MM-TT</td><td>8mm</td><td>-</td><td>8mm</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-MONO-8MM-TZ-G2.1" src="assets/k2018/basic_mono_4.png"/></div></td><td class="font-bold text-slate-900">ZL-MONO-8MM-TZ-G2.1</td><td>8mm</td><td>15cm</td><td>Gniazdo 5.5/2.1</td><td>2x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-MONO-8MM-TZ-G2.5" src="assets/k2018/basic_mono_4.png"/></div></td><td class="font-bold text-slate-900">ZL-MONO-8MM-TZ-G2.5</td><td>8mm</td><td>15cm</td><td>Gniazdo 5.5/2.5</td><td>2x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-MONO-10MM-TP" src="assets/k2018/basic_mono_1.png"/></div></td><td class="font-bold text-slate-900">ZL-MONO-10MM-TP</td><td>10mm</td><td>14cm</td><td>-</td><td>2x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-MONO-10MM-TPT" src="assets/k2018/basic_mono_2.png"/></div></td><td class="font-bold text-slate-900">ZL-MONO-10MM-TPT</td><td>10mm</td><td>14cm</td><td>10mm</td><td>2x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-MONO-10MM-TT" src="assets/k2018/basic_mono_3.png"/></div></td><td class="font-bold text-slate-900">ZL-MONO-10MM-TT</td><td>10mm</td><td>-</td><td>10mm</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-MONO-10MM-TZ-G2.1" src="assets/k2018/basic_mono_4.png"/></div></td><td class="font-bold text-slate-900">ZL-MONO-10MM-TZ-G2.1</td><td>10mm</td><td>15cm</td><td>Gniazdo 5.5/2.1</td><td>2x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-MONO-10MM-TZ-G2.5" src="assets/k2018/basic_mono_4.png"/></div></td><td class="font-bold text-slate-900">ZL-MONO-10MM-TZ-G2.5</td><td>10mm</td><td>15cm</td><td>Gniazdo 5.5/2.5</td><td>2x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGB-10MM-TP" src="assets/k2018/basic_rgb_1.png"/></div></td><td class="font-bold text-slate-900">ZL-RGB-10MM-TP</td><td>10mm</td><td>14cm</td><td>-</td><td>4x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGB-10MM-TPT" src="assets/k2018/basic_rgb_2.png"/></div></td><td class="font-bold text-slate-900">ZL-RGB-10MM-TPT</td><td>10mm</td><td>14cm</td><td>10mm</td><td>4x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGB-10MM-TT" src="assets/k2018/basic_rgb_3.png"/></div></td><td class="font-bold text-slate-900">ZL-RGB-10MM-TT</td><td>10mm</td><td>-</td><td>10mm</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGB-10MM-TZ-G2.1" src="assets/k2018/basic_mono_4.png"/></div></td><td class="font-bold text-slate-900">ZL-RGB-10MM-TZ-G2.1</td><td>10mm</td><td>15cm</td><td>Gniazdo 5.5/2.1</td><td>4x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGBW-10MM-TP" src="assets/k2018/basic_rgbw_1.png"/></div></td><td class="font-bold text-slate-900">ZL-RGBW-10MM-TP</td><td>10mm</td><td>14cm</td><td>-</td><td>5x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGBW-10MM-TPT" src="assets/k2018/basic_rgbw_2.png"/></div></td><td class="font-bold text-slate-900">ZL-RGBW-10MM-TPT</td><td>10mm</td><td>14cm</td><td>10mm</td><td>5x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGBW-10MM-TT" src="assets/k2018/basic_rgbw_3.png"/></div></td><td class="font-bold text-slate-900">ZL-RGBW-10MM-TT</td><td>10mm</td><td>-</td><td>10mm</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGBW-12MM-TP" src="assets/k2018/basic_rgbw_1.png"/></div></td><td class="font-bold text-slate-900">ZL-RGBW-12MM-TP</td><td>12mm</td><td>14cm</td><td>-</td><td>5x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGBW-12MM-TPT" src="assets/k2018/basic_rgbw_2.png"/></div></td><td class="font-bold text-slate-900">ZL-RGBW-12MM-TPT</td><td>12mm</td><td>14cm</td><td>12mm</td><td>5x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGBW-12MM-TT" src="assets/k2018/basic_rgbw_3.png"/></div></td><td class="font-bold text-slate-900">ZL-RGBW-12MM-TT</td><td>12mm</td><td>-</td><td>12mm</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-RGBW-12MM-TZ-G2.1" src="assets/k2018/basic_mono_4.png"/></div></td><td class="font-bold text-slate-900">ZL-RGBW-12MM-TZ-G2.1</td><td>12mm</td><td>15cm</td><td>Gniazdo 5.5/2.1</td><td>5x0.35</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ZŁĄCZKI DO TAŚM LED / SERIA HIPP</h3>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">2</span>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Nr katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zastosowanie</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH8-TP" src="assets/k2018/hipp_mono_tp.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH8-TP</td><td>8mm</td><td>max 2x0.50</td><td>Do połączenia taśmy bez żelu z przewodem</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH10-TP" src="assets/k2018/hipp_mono_tp.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH10-TP</td><td>10mm</td><td>max 2x0.50</td><td>Do połączenia taśmy bez żelu z przewodem</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH8-TT" src="assets/k2018/hipp_mono_tt.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH8-TT</td><td>8mm</td><td>8mm</td><td>Do połączenia dwóch taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH10-TT" src="assets/k2018/hipp_mono_tt.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH10-TT</td><td>10mm</td><td>10mm</td><td>Do połączenia dwóch taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH10-RGB-TP" src="assets/k2018/hipp_rgb_tp.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH10-RGB-TP</td><td>10mm</td><td>max 4x0.50</td><td>Do połączenia taśmy bez żelu z przewodem</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH12-RGBW-TP" src="assets/k2018/hipp_rgb_tp.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH12-RGBW-TP</td><td>12mm</td><td>max 5x0.50</td><td>Do połączenia taśmy bez żelu z przewodem</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH10-RGB-TT" src="assets/k2018/hipp_rgb_tt.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH10-RGB-TT</td><td>10mm</td><td>10mm</td><td>Do połączenia dwóch taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH12-RGBW-TT" src="assets/k2018/hipp_rgb_tt.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH12-RGBW-TT</td><td>12mm</td><td>12mm</td><td>Do połączenia dwóch taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH8W-TP" src="assets/k2018/hipp_w_tp.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH8W-TP</td><td>8mm</td><td>max 2x0.50</td><td>Do połączenia taśmy w żelu z przewodem</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH10W-TP" src="assets/k2018/hipp_w_tp.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH10W-TP</td><td>10mm</td><td>max 2x0.50</td><td>Do połączenia taśmy w żelu z przewodem</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH8W-TT" src="assets/k2018/hipp_w_tt.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH8W-TT</td><td>8mm</td><td>8mm</td><td>Do połączenia dwóch taśm w żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH10W-TT" src="assets/k2018/hipp_w_tt.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH10W-TT</td><td>10mm</td><td>10mm</td><td>Do połączenia dwóch taśm w żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH10W-RGB-TP" src="assets/k2018/hipp_rgb_tp.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH10W-RGB-TP</td><td>10mm</td><td>max 4x0.50</td><td>Do połączenia taśmy w żelu z przewodem</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH12W-RGBW-TP" src="assets/k2018/hipp_rgb_tp.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH12W-RGBW-TP</td><td>12mm</td><td>max 5x0.50</td><td>Do połączenia taśmy w żelu z przewodem</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH10W-RGB-TT" src="assets/k2018/hipp_rgb_tt.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH10W-RGB-TT</td><td>10mm</td><td>10mm</td><td>Do połączenia dwóch taśm w żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZLH12W-RGBW-TT" src="assets/k2018/hipp_rgb_tt.png"/></div></td><td class="font-bold text-slate-900">PR-ZLH12W-RGBW-TT</td><td>12mm</td><td>12mm</td><td>Do połączenia dwóch taśm w żelu</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ZŁĄCZKI DO TAŚM LED / SERIA PCB</h3>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">3</span>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Nr katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Model</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zastosowanie</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL8L-PCB-MONO" src="assets/k2018/pcb_mono_1.png"/></div></td><td class="font-bold text-slate-900">PR-ZL8L-PCB-MONO</td><td>8mm</td><td>L</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL8T-PCB-MONO" src="assets/k2018/pcb_mono_2.png"/></div></td><td class="font-bold text-slate-900">PR-ZL8T-PCB-MONO</td><td>8mm</td><td>T</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL8X-PCB-MONO" src="assets/k2018/pcb_mono_3.png"/></div></td><td class="font-bold text-slate-900">PR-ZL8X-PCB-MONO</td><td>8mm</td><td>X</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL10L-PCB-MONO" src="assets/k2018/pcb_mono_1.png"/></div></td><td class="font-bold text-slate-900">PR-ZL10L-PCB-MONO</td><td>10mm</td><td>L</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL10T-PCB-MONO" src="assets/k2018/pcb_mono_2.png"/></div></td><td class="font-bold text-slate-900">PR-ZL10T-PCB-MONO</td><td>10mm</td><td>T</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL10X-PCB-MONO" src="assets/k2018/pcb_mono_3.png"/></div></td><td class="font-bold text-slate-900">PR-ZL10X-PCB-MONO</td><td>10mm</td><td>X</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL10L-PCB-RGB" src="assets/k2018/pcb_rgb_1.png"/></div></td><td class="font-bold text-slate-900">PR-ZL10L-PCB-RGB</td><td>10mm</td><td>L</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL10T-PCB-RGB" src="assets/k2018/pcb_rgb_2.png"/></div></td><td class="font-bold text-slate-900">PR-ZL10T-PCB-RGB</td><td>10mm</td><td>T</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL10X-PCB-RGB" src="assets/k2018/pcb_rgb_3.png"/></div></td><td class="font-bold text-slate-900">PR-ZL10X-PCB-RGB</td><td>10mm</td><td>X</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL10L-PCB-RGBW" src="assets/k2018/pcb_rgb_1.png"/></div></td><td class="font-bold text-slate-900">PR-ZL10L-PCB-RGBW</td><td>10mm</td><td>L</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL10T-PCB-RGBW" src="assets/k2018/pcb_rgb_2.png"/></div></td><td class="font-bold text-slate-900">PR-ZL10T-PCB-RGBW</td><td>10mm</td><td>T</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL10X-PCB-RGBW" src="assets/k2018/pcb_rgb_3.png"/></div></td><td class="font-bold text-slate-900">PR-ZL10X-PCB-RGBW</td><td>10mm</td><td>X</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL12L-PCB-RGBW" src="assets/k2018/pcb_rgb_1.png"/></div></td><td class="font-bold text-slate-900">PR-ZL12L-PCB-RGBW</td><td>12mm</td><td>L</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL12T-PCB-RGBW" src="assets/k2018/pcb_rgb_2.png"/></div></td><td class="font-bold text-slate-900">PR-ZL12T-PCB-RGBW</td><td>12mm</td><td>T</td><td>Do połączenia taśm bez żelu</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZL12X-PCB-RGBW" src="assets/k2018/pcb_rgb_3.png"/></div></td><td class="font-bold text-slate-900">PR-ZL12X-PCB-RGBW</td><td>12mm</td><td>X</td><td>Do połączenia taśm bez żelu</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    </div></div></section>
+        <section id="zasilanie-i-rozgalezniki-dc" class="py-12 border-b border-gray-100 scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-10 border-l-4 border-prescot-orange pl-6">
+                    <h2 class="text-3xl font-extrabold text-gray-900 uppercase tracking-tight">Zasilanie i Rozgałęźniki DC</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-10">
+        
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">KABLE DC / WTYKI I ROZGAŁĘŹNIKI</h3>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">4</span>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h4 class="text-sm font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Wtyki DC z przewodem</h4>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Numer katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Połączenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Przewód</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Kolor</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.1+15" src="assets/k2018/wt_dc_1.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.1+15</td><td>5.5/2.1</td><td>15cm</td><td>-</td><td>2x0.35</td><td>biały</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.1+15CZ" src="assets/k2018/wt_dc_2.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.1+15CZ</td><td>5.5/2.1</td><td>15cm</td><td>-</td><td>2x0.35</td><td>czarny</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.5+15" src="assets/k2018/wt_dc_1.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.5+15</td><td>5.5/2.5</td><td>15cm</td><td>-</td><td>2x0.35</td><td>biały</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.5+15CZ" src="assets/k2018/wt_dc_2.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.5+15CZ</td><td>5.5/2.5</td><td>15cm</td><td>-</td><td>2x0.35</td><td>czarny</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.1+150" src="assets/k2018/wt_dc_3.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.1+150</td><td>5.5/2.1</td><td>150cm</td><td>-</td><td>2x0.35</td><td>biały</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.1+150CZ" src="assets/k2018/wt_dc_4.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.1+150CZ</td><td>5.5/2.1</td><td>150cm</td><td>-</td><td>2x0.35</td><td>czarny</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.5+150" src="assets/k2018/wt_dc_3.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.5+150</td><td>5.5/2.5</td><td>150cm</td><td>-</td><td>2x0.35</td><td>biały</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.5+150CZ" src="assets/k2018/wt_dc_4.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.5+150CZ</td><td>5.5/2.5</td><td>150cm</td><td>-</td><td>2x0.35</td><td>czarny</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h4 class="text-sm font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Przewody i rozgałęźniki DC</h4>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Numer katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Połączenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Przewód</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Kolor</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ROZ-DC-5.5/2.1-2X1CZ" src="assets/k2018/roz_dc_1.png"/></div></td><td class="font-bold text-slate-900">ROZ-DC-5.5/2.1-2X1CZ</td><td>5.5/2.1 x2</td><td>24cm</td><td>5.5/2.1</td><td>2x0.35/2x0.50</td><td>czarny</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ROZ-DC-5.5/2.1-3X1CZ" src="assets/k2018/roz_dc_2.png"/></div></td><td class="font-bold text-slate-900">ROZ-DC-5.5/2.1-3X1CZ</td><td>5.5/2.1 x3</td><td>24cm</td><td>5.5/2.1</td><td>2x0.35/2x0.50</td><td>czarny</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ROZ-DC-5.5/2.1-4X1CZ" src="assets/k2018/roz_dc_3.png"/></div></td><td class="font-bold text-slate-900">ROZ-DC-5.5/2.1-4X1CZ</td><td>5.5/2.1 x4</td><td>24cm</td><td>5.5/2.1</td><td>2x0.35/2x0.50</td><td>czarny</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ROZ-DC-5.5/2.1-5XCZ" src="assets/k2018/roz_dc_4.png"/></div></td><td class="font-bold text-slate-900">ROZ-DC-5.5/2.1-5XCZ</td><td>5.5/2.1 x5</td><td>24cm</td><td>5.5/2.1</td><td>2x0.35/2x0.50</td><td>czarny</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ROZ-DC-5.5/2.1-6XCZ" src="assets/k2018/roz_dc_5.png"/></div></td><td class="font-bold text-slate-900">ROZ-DC-5.5/2.1-6XCZ</td><td>5.5/2.1 x6</td><td>24cm</td><td>5.5/2.1</td><td>2x0.35/2x0.50</td><td>czarny</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="DC-DC-150_5.5/2.1" src="assets/k2018/roz_dc_6.png"/></div></td><td class="font-bold text-slate-900">DC-DC-150_5.5/2.1</td><td>5.5/2.1</td><td>150cm</td><td>5.5/2.1</td><td>2x0.35</td><td>czarny</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ZŁĄCZA DC HERMETYCZNE I RGB</h3>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">5</span>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Numer katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Połączenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Przewód</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="LED-ZIP-Ż" src="assets/k2018/zip_female.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-Ż</td><td>5.5/2.1</td><td>15cm</td><td>-</td><td>2x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="LED-ZIP-M" src="assets/k2018/zip_male.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-M</td><td>5.5/2.1</td><td>15cm</td><td>-</td><td>2x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="LED-ZIP-Ż-RGB" src="assets/k2018/zip_rgb_female.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-Ż-RGB</td><td>4 pin</td><td>15cm</td><td>-</td><td>4x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="LED-ZIP-M-RGB" src="assets/k2018/zip_rgb_male.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-M-RGB</td><td>4 pin</td><td>15cm</td><td>-</td><td>4x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="LED-ZIP-Ż-RGBW" src="assets/k2018/zip_rgb_female.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-Ż-RGBW</td><td>5 pin</td><td>15cm</td><td>-</td><td>5x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="LED-ZIP-M-RGBW" src="assets/k2018/zip_rgb_male.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-M-RGBW</td><td>5 pin</td><td>15cm</td><td>-</td><td>5x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-RGB-4PIN15" src="assets/k2018/rgb_gn.png"/></div></td><td class="font-bold text-slate-900">GN-RGB-4PIN15</td><td>4 pin</td><td>15cm</td><td>-</td><td>4x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WTYK-RGB-4PIN15" src="assets/k2018/rgb_wtyk_cz.png"/></div></td><td class="font-bold text-slate-900">WTYK-RGB-4PIN15</td><td>4 pin</td><td>15cm</td><td>-</td><td>4x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WTYK-RGB-4PIN-B" src="assets/k2018/rgb_wtyk_cz.png"/></div></td><td class="font-bold text-slate-900">WTYK-RGB-4PIN-B</td><td>4 pin</td><td>-</td><td>-</td><td>4x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WTYK-RGB-4PIN-CZ" src="assets/k2018/rgb_wtyk_cz.png"/></div></td><td class="font-bold text-slate-900">WTYK-RGB-4PIN-CZ</td><td>4 pin</td><td>-</td><td>-</td><td>4x0.35</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">WTYKI I GNIAZDA DC</h3>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">6</span>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h4 class="text-sm font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Wtyki DC</h4>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Numer katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Montaż</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.1-PP" src="assets/k2018/wt_pp.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.1-PP</td><td>5.5/2.1</td><td>na przewód</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.5-PP" src="assets/k2018/wt_pp.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.5-PP</td><td>5.5/2.5</td><td>na przewód</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.1ZS" src="assets/k2018/gn_zs.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.1ZS</td><td>5.5/2.1</td><td>zacisk śrubowy</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="WT-DC-5.5/2.5ZS" src="assets/k2018/gn_zs.png"/></div></td><td class="font-bold text-slate-900">WT-DC-5.5/2.5ZS</td><td>5.5/2.5</td><td>zacisk śrubowy</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h4 class="text-sm font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Gniazda DC</h4>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Numer katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Montaż</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-DC-5.5/2.1-OB1" src="assets/k2018/gn_ob1.png"/></div></td><td class="font-bold text-slate-900">GN-DC-5.5/2.1-OB1</td><td>5.5/2.1</td><td>do obudowy od wewnątrz</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-DC-5.5/2.5-OB1" src="assets/k2018/gn_ob1.png"/></div></td><td class="font-bold text-slate-900">GN-DC-5.5/2.5-OB1</td><td>5.5/2.5</td><td>do obudowy od wewnątrz</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-DC-5.5/2.1-OBP" src="assets/k2018/gn_ob1.png"/></div></td><td class="font-bold text-slate-900">GN-DC-5.5/2.1-OBP</td><td>5.5/2.1</td><td>do obudowy od wewnątrz</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-DC-5.5/2.5-OBP" src="assets/k2018/gn_ob1.png"/></div></td><td class="font-bold text-slate-900">GN-DC-5.5/2.5-OBP</td><td>5.5/2.5</td><td>do obudowy od wewnątrz</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-DC-5.5/2.1-OBP2" src="assets/k2018/gn_ob1.png"/></div></td><td class="font-bold text-slate-900">GN-DC-5.5/2.1-OBP2</td><td>5.5/2.1</td><td>do obudowy z zewnątrz</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-DC-5.5/2.5-OBP2" src="assets/k2018/gn_ob1.png"/></div></td><td class="font-bold text-slate-900">GN-DC-5.5/2.5-OBP2</td><td>5.5/2.5</td><td>do obudowy z zewnątrz</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-DC-5.5/2.1-P" src="assets/k2018/wt_pp.png"/></div></td><td class="font-bold text-slate-900">GN-DC-5.5/2.1-P</td><td>5.5/2.1</td><td>na przewód</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-DC-5.5/2.5-P" src="assets/k2018/wt_pp.png"/></div></td><td class="font-bold text-slate-900">GN-DC-5.5/2.5-P</td><td>5.5/2.5</td><td>na przewód</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-DC-5.5/2.1ZS" src="assets/k2018/gn_zs.png"/></div></td><td class="font-bold text-slate-900">GN-DC-5.5/2.1ZS</td><td>5.5/2.1</td><td>zacisk śrubowy</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="GN-DC-5.5/2.5ZS" src="assets/k2018/gn_zs.png"/></div></td><td class="font-bold text-slate-900">GN-DC-5.5/2.5ZS</td><td>5.5/2.5</td><td>zacisk śrubowy</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    </div></div></section>
+        <section id="kable-i-szybkozlaczki" class="py-12 border-b border-gray-100 scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-10 border-l-4 border-prescot-orange pl-6">
+                    <h2 class="text-3xl font-extrabold text-gray-900 uppercase tracking-tight">Kable i Szybkozłączki</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-10">
+        
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ZŁĄCZKI / SERIA KLIK</h3>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">7</span>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Numer katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Połączenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Przewód</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="LED-Z2P-Ż" src="assets/k2018/real_p8_img_1_xref212.jpeg"/></div></td><td class="font-bold text-slate-900">LED-Z2P-Ż</td><td>2 pin</td><td>14cm</td><td>-</td><td>2x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="LED-Z2P-M" src="assets/k2018/real_p8_img_2_xref214.jpeg"/></div></td><td class="font-bold text-slate-900">LED-Z2P-M</td><td>2 pin</td><td>14cm</td><td>-</td><td>2x0.35</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="TAM-GM-14" src="assets/k2018/real_p8_img_2_xref214.jpeg"/></div></td><td class="font-bold text-slate-900">TAM-GM-14</td><td>2 pin</td><td>14cm</td><td>-</td><td>2x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="TAM-WZ-14" src="assets/k2018/real_p8_img_1_xref212.jpeg"/></div></td><td class="font-bold text-slate-900">TAM-WZ-14</td><td>2 pin</td><td>14cm</td><td>-</td><td>2x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-2PIN-WS" src="assets/k2018/real_p8_img_1_xref212.jpeg"/></div></td><td class="font-bold text-slate-900">ZL-2PIN-WS</td><td>konektor żeński 6.3/2.5</td><td>-</td><td>konektor męski 6.3/2.5</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-2PIN-KLIK-W" src="assets/k2018/real_p8_img_5_xref222.jpeg"/></div></td><td class="font-bold text-slate-900">ZL-2PIN-KLIK-W</td><td>2 pin</td><td>15cm</td><td>-</td><td>2x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-2PIN-KLIK-G" src="assets/k2018/real_p8_img_6_xref224.jpeg"/></div></td><td class="font-bold text-slate-900">ZL-2PIN-KLIK-G</td><td>2 pin</td><td>15cm</td><td>-</td><td>2x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-2PIN-KLIK300-W" src="assets/k2018/real_p8_img_5_xref222.jpeg"/></div></td><td class="font-bold text-slate-900">ZL-2PIN-KLIK300-W</td><td>2 pin</td><td>300cm</td><td>-</td><td>2x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-2PIN-KLIK300-G" src="assets/k2018/real_p8_img_6_xref224.jpeg"/></div></td><td class="font-bold text-slate-900">ZL-2PIN-KLIK300-G</td><td>2 pin</td><td>300cm</td><td>-</td><td>2x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-2PIN-KLIK" src="assets/k2018/real_p8_img_4_xref218.jpeg"/></div></td><td class="font-bold text-slate-900">ZL-2PIN-KLIK</td><td>2 pin</td><td>15+15cm</td><td>-</td><td>2x0.50</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-2PIN-KLIK300+15" src="assets/k2018/real_p8_img_4_xref218.jpeg"/></div></td><td class="font-bold text-slate-900">ZL-2PIN-KLIK300+15</td><td>2 pin</td><td>300+15cm</td><td>-</td><td>2x0.50</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ZŁĄCZKI / SERIA FAST I LISTWY</h3>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">8</span>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h4 class="text-sm font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Seria FAST</h4>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Numer katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Model</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zastosowanie</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZPF-T1" src="assets/k2018/fast_t1.png"/></div></td><td class="font-bold text-slate-900">PR-ZPF-T1</td><td>T</td><td>Do rozgałęzienia przewodu jedno lub dwużyłowego</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZPF-T2" src="assets/k2018/fast_t1.png"/></div></td><td class="font-bold text-slate-900">PR-ZPF-T2</td><td>T</td><td>Do rozgałęzienia przewodu jedno lub dwużyłowego</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZPF-H1" src="assets/k2018/fast_h1.png"/></div></td><td class="font-bold text-slate-900">PR-ZPF-H1</td><td>H</td><td>Do połączenia dwóch przewodów jedno lub dwużyłowych</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-ZPF-H2" src="assets/k2018/fast_h1.png"/></div></td><td class="font-bold text-slate-900">PR-ZPF-H2</td><td>H</td><td>Do połączenia dwóch przewodów jedno lub dwużyłowych</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h4 class="text-sm font-bold text-slate-900 mb-4 border-b border-gray-100 pb-2">Złączki skręcane 12-torowe</h4>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Numer katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Zakończenie</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Typ złącza</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X2.5B" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X2.5B</td><td>2.5mm</td><td>2.5mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X4B" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X4B</td><td>4mm</td><td>4mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X6B" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X6B</td><td>6mm</td><td>6mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X10B" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X10B</td><td>10mm</td><td>10mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X16B" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X16B</td><td>16mm</td><td>16mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X25B" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X25B</td><td>25mm</td><td>25mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X2.5P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X2.5P</td><td>2.5mm</td><td>2.5mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X4P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X4P</td><td>4mm</td><td>4mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X6P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X6P</td><td>6mm</td><td>6mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X10P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X10P</td><td>10mm</td><td>10mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X16P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X16P</td><td>16mm</td><td>16mm</td><td>Skręcane</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="ZL-12X25P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X25P</td><td>25mm</td><td>25mm</td><td>Skręcane</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    </div></div></section>
+        <section id="przyciski-i-wlaczniki" class="py-12 border-b border-gray-100 scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-10 border-l-4 border-prescot-orange pl-6">
+                    <h2 class="text-3xl font-extrabold text-gray-900 uppercase tracking-tight">Przyciski i Włączniki</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-10">
+        
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">PRZYCISKI I WŁĄCZNIKI</h3>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">9</span>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Nr katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Kolor przycisku/obudowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Kolor podświetlenia</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Ilość pozycji</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Otwór montażowy</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PS11ABK" src="assets/k2018/ps11abk.png"/></div></td><td class="font-bold text-slate-900">PS11ABK</td><td>czarny/czarny</td><td>-</td><td>2</td><td>12mm</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PRZ-LED-12-B" src="assets/k2018/prz_led_blue.png"/></div></td><td class="font-bold text-slate-900">PRZ-LED-12-B</td><td>srebrny</td><td>niebieski</td><td>2</td><td>16mm</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PRZ-LED-12-BO" src="assets/k2018/prz_led_blue.png"/></div></td><td class="font-bold text-slate-900">PRZ-LED-12-BO</td><td>srebrny</td><td>niebieski</td><td>2</td><td>16mm</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PRZ-LED-12-G" src="assets/k2018/prz_led_blue.png"/></div></td><td class="font-bold text-slate-900">PRZ-LED-12-G</td><td>srebrny</td><td>zielony</td><td>2</td><td>16mm</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PRZ-LED-12-R" src="assets/k2018/prz_led_blue.png"/></div></td><td class="font-bold text-slate-900">PRZ-LED-12-R</td><td>srebrny</td><td>czerwony</td><td>2</td><td>16mm</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-WLK-B" src="assets/k2018/real_p12_img_19_xref407.png"/></div></td><td class="font-bold text-slate-900">PR-WLK-B</td><td>biały/biały</td><td>-</td><td>2</td><td>19.4mm</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-WLK-CZ" src="assets/k2018/real_p12_img_18_xref405.jpeg"/></div></td><td class="font-bold text-slate-900">PR-WLK-CZ</td><td>czarny/czarny</td><td>-</td><td>2</td><td>19.4mm</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="PR-WLK-SZ" src="assets/k2018/real_p12_img_20_xref409.jpeg"/></div></td><td class="font-bold text-slate-900">PR-WLK-SZ</td><td>szary/szary</td><td>-</td><td>2</td><td>19.4mm</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    </div></div></section>
+        <section id="zlaczki-hermetyczne-ip68" class="py-12 border-b border-gray-100 scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-10 border-l-4 border-prescot-orange pl-6">
+                    <h2 class="text-3xl font-extrabold text-gray-900 uppercase tracking-tight">Złączki Hermetyczne IP68</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-10">
+        
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ZŁĄCZKI HERMETYCZNE NA PRZEWÓD</h3>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">10</span>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Nr katalogowy</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Rodzaj</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Ilość pinów</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Przewód</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">IP</th><th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">IK</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.381.A2A" src="assets/k2018/thb_381_a.png"/></div></td><td class="font-bold text-slate-900">THB.381.A2A</td><td>wtyk</td><td>2</td><td>0.25-1.5mm2</td><td>IP69K/IP68</td><td>IK06</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.381.B2A" src="assets/k2018/thb_381_a.png"/></div></td><td class="font-bold text-slate-900">THB.381.B2A</td><td>gniazdo</td><td>2</td><td>0.25-1.5mm2</td><td>IP69K/IP68</td><td>IK06</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.387.A3A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.A3A</td><td>wtyk</td><td>3</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.387.B3A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.B3A</td><td>gniazdo</td><td>3</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.387.A4A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.A4A</td><td>wtyk</td><td>4</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.387.B4A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.B4A</td><td>gniazdo</td><td>4</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.387.A5A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.A5A</td><td>wtyk</td><td>5</td><td>0.25-1.5mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.387.B5A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.B5A</td><td>gniazdo</td><td>5</td><td>0.25-1.5mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.391.A2A" src="assets/k2018/thb_391_a3.png"/></div></td><td class="font-bold text-slate-900">THB.391.A2A</td><td>złączka</td><td>2</td><td>0.5-4mm2</td><td>IP68</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.391.A3A" src="assets/k2018/thb_391_a3.png"/></div></td><td class="font-bold text-slate-900">THB.391.A3A</td><td>złączka</td><td>3</td><td>0.5-4mm2</td><td>IP68</td><td>-</td></tr>
+<tr class="hover:bg-gray-50/50 transition-colors"><td><div class="product-thumb"><img alt="THB.391.A4A" src="assets/k2018/thb_391_a3.png"/></div></td><td class="font-bold text-slate-900">THB.391.A4A</td><td>złączka</td><td>4</td><td>0.5-4mm2</td><td>IP68</td><td>-</td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    </div></div></section>
+    </main>
+
+    <!-- LIGHTBOX OVERLAY -->
+    <div id="lightbox" class="lightbox-overlay no-print" onclick="closeLightbox(event)">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+            <img id="lightbox-img" src="" alt="Powiększenie produktu" class="lightbox-img" />
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12 no-print border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <img alt="PRESCOT Logo" class="h-6 mb-4" src="assets/logo_light.svg"/>
+                <p class="text-gray-500 text-xs max-w-xs">Producent i dystrybutor profesjonalnych systemów oświetleniowych LED, zasilaczy wodoszczelnych oraz akcesoriów montażowych dla B2B.</p>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">Dystrybucja i Jakość</h4>
+                <p class="text-gray-500 text-xs">Wszystkie produkty są objęte pełną gwarancją i posiadają certyfikaty zgodności CE oraz RoHS. Towar dostępny od ręki.</p>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">Kontakt B2B</h4>
+                <p class="text-gray-500 text-xs">PRESCOT Sp. z o.o. | prescot.pl | E-mail: biuro@prescot.pl</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-gray-800 text-[10px] text-gray-600 flex justify-between">
+            <p>© 2026 PRESCOT Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+            <p>Wydanie: Styczeń 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        function openLightbox(imgSrc, sku) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = sku;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Attach click events to product thumbs
+        document.addEventListener('DOMContentLoaded', function() {
+            const thumbs = document.querySelectorAll('.product-thumb');
+            thumbs.forEach(thumb => {
+                const img = thumb.querySelector('img');
+                if (img) {
+                    thumb.addEventListener('click', function() {
+                        openLightbox(img.src, img.alt);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
