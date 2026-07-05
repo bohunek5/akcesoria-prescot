@@ -246,7 +246,7 @@
     </section>
 
     <!-- FILTER BAR -->
-    <section class="desktop-filter-bar sticky top-16 bg-white/95 backdrop-blur-md border-b border-gray-200/60 py-3.5 z-40 no-print shadow-sm">
+    <section class="desktop-filter-bar hidden md:block sticky top-16 bg-white/95 backdrop-blur-md border-b border-gray-200/60 py-3.5 z-40 no-print shadow-sm">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-wrap gap-2 items-center mb-3">
                 <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mr-2">Kategoria:</span>
@@ -935,7 +935,7 @@
     </footer>
 
     <!-- BOTTOM MOBILE NAVIGATION BAR -->
-    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200/80 h-16 flex justify-between items-center z-50 shadow-[0_-4px_10px_-1px_rgba(0,0,0,0.05)] no-print px-8">
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200/80 h-16 flex justify-between items-center z-50 shadow-[0_-4px_10px_-1px_rgba(0,0,0,0.05)] no-print px-8">
         <!-- Left brand text: NIEZAWODNE (navy) -->
         <span class="text-xs font-black uppercase tracking-widest text-[#354956] font-heading">Niezawodne</span>
         
@@ -950,7 +950,7 @@
 
     <!-- BOTTOM SHEET FILTERS DRAWER -->
     <div id="bottom-sheet-overlay" class="bottom-sheet-overlay no-print" onclick="closeFiltersSheet()"></div>
-    <div id="bottom-sheet" class="bottom-sheet lg:hidden no-print">
+    <div id="bottom-sheet" class="bottom-sheet md:hidden no-print">
         <div class="bottom-sheet-handle"></div>
         <div class="px-6 pb-6">
             <div class="flex justify-between items-center mb-5 pt-2">
@@ -1135,7 +1135,7 @@
         }
 
         function applyFilters() {
-            const isMobile = window.innerWidth < 1024;
+            const isMobile = window.innerWidth < 768;
             const prefix = isMobile ? 'mobile-' : '';
             
             const selectedWidth = document.getElementById(prefix + 'filter-width').value;
@@ -1164,7 +1164,7 @@
                 
                 let visibleRowsInSection = 0;
                 
-                const seriesBoxes = sec.querySelectorAll('.bg-white.border');
+                const seriesBoxes = sec.querySelectorAll('.mb-8');
                 seriesBoxes.forEach(box => {
                     let visibleRowsInBox = 0;
                     
