@@ -935,29 +935,17 @@
     </footer>
 
     <!-- BOTTOM MOBILE NAVIGATION BAR -->
-    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200/80 h-16 flex justify-around items-center z-50 shadow-[0_-4px_10px_-1px_rgba(0,0,0,0.05)] no-print px-4">
-        <a href="#zlaczki-seria-fc" class="flex flex-col items-center text-gray-400 hover:text-prescot-orange transition-colors">
-            <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-            <span class="text-[9px] font-bold uppercase tracking-wider">Złączki</span>
-        </a>
-        <a href="#zasilanie-i-rozgalezniki-dc" class="flex flex-col items-center text-gray-400 hover:text-prescot-orange transition-colors">
-            <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-            <span class="text-[9px] font-bold uppercase tracking-wider">Kable DC</span>
-        </a>
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200/80 h-16 flex justify-between items-center z-50 shadow-[0_-4px_10px_-1px_rgba(0,0,0,0.05)] no-print px-8">
+        <!-- Left brand text: NIEZAWODNE (navy) -->
+        <span class="text-xs font-black uppercase tracking-widest text-[#354956] font-heading">Niezawodne</span>
         
         <!-- Center Action Filters Button -->
-        <button onclick="openFiltersSheet()" class="flex flex-col items-center justify-center -mt-6 bg-prescot-orange text-white w-14 h-14 rounded-full shadow-lg border-4 border-white hover:scale-105 transition-all">
+        <button onclick="openFiltersSheet()" class="flex flex-col items-center justify-center -mt-6 bg-prescot-orange text-white w-14 h-14 rounded-full shadow-lg border-4 border-white hover:scale-105 active:scale-95 transition-all">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path></svg>
         </button>
 
-        <a href="#przyciski-i-wlaczniki" class="flex flex-col items-center text-gray-400 hover:text-prescot-orange transition-colors">
-            <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
-            <span class="text-[9px] font-bold uppercase tracking-wider">Włączniki</span>
-        </a>
-        <a href="#zlaczki-hermetyczne-ip68" class="flex flex-col items-center text-gray-400 hover:text-prescot-orange transition-colors">
-            <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-            <span class="text-[9px] font-bold uppercase tracking-wider">IP68</span>
-        </a>
+        <!-- Right brand text: POŁĄCZENIA (orange) -->
+        <span class="text-xs font-black uppercase tracking-widest text-prescot-orange font-heading">Połączenia</span>
     </div>
 
     <!-- BOTTOM SHEET FILTERS DRAWER -->
