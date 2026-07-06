@@ -370,7 +370,7 @@
     <!-- MAIN PRODUCTS -->
     <main class="py-8">
         
-        <section id="zlaczki-seria-fc" data-category="Złączki do taśm LED" class="category-section py-12 border-b border-gray-100 scroll-mt-24 transition-all duration-300">
+        <section id="zlaczki-do-tasm-led" data-category="Złączki do taśm LED" class="category-section py-12 border-b border-gray-100 scroll-mt-24 transition-all duration-300">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-10 border-l-4 border-prescot-orange pl-6">
                     <h2 class="text-3xl font-extrabold text-gray-900 uppercase tracking-tight">Złączki do taśm LED</h2>
@@ -1089,6 +1089,54 @@
 
     <script>
         let activeCategory = 'all';
+        let filterRunId = 0;
+        const filterIds = ['filter-width', 'filter-wire', 'filter-connector', 'filter-connection'];
+        const filterOptionCache = {};
+
+        function cacheFilterOptions() {
+            [...filterIds, ...filterIds.map(id => 'mobile-' + id)].forEach(id => {
+                const select = document.getElementById(id);
+                if (!select || filterOptionCache[id]) return;
+                filterOptionCache[id] = Array.from(select.options).map(opt => ({
+                    value: opt.value,
+                    text: opt.textContent
+                }));
+            });
+        }
+
+        function getCurrentFilters() {
+            const isMobile = window.innerWidth < 768;
+            const prefix = isMobile ? 'mobile-' : '';
+
+            return {
+                width: document.getElementById(prefix + 'filter-width').value,
+                wire: document.getElementById(prefix + 'filter-wire').value,
+                connector: document.getElementById(prefix + 'filter-connector').value,
+                connection: document.getElementById(prefix + 'filter-connection').value
+            };
+        }
+
+        function setFilterValues(filters) {
+            ['filter-width', 'mobile-filter-width'].forEach(id => document.getElementById(id).value = filters.width);
+            ['filter-wire', 'mobile-filter-wire'].forEach(id => document.getElementById(id).value = filters.wire);
+            ['filter-connector', 'mobile-filter-connector'].forEach(id => document.getElementById(id).value = filters.connector);
+            ['filter-connection', 'mobile-filter-connection'].forEach(id => document.getElementById(id).value = filters.connection);
+        }
+
+        function setCategoryButtonState(buttons, category) {
+            buttons.forEach(btn => {
+                const onClickAttr = btn.getAttribute('onclick') || '';
+                const isActive = onClickAttr.includes("'" + category + "'");
+
+                btn.classList.toggle('bg-prescot-orange', isActive);
+                btn.classList.toggle('text-white', isActive);
+                btn.classList.toggle('border-prescot-orange', isActive);
+                btn.classList.toggle('shadow-sm', isActive);
+                btn.classList.toggle('bg-gray-50', !isActive);
+                btn.classList.toggle('text-gray-600', !isActive);
+                btn.classList.toggle('border-gray-200/80', !isActive);
+            });
+        }
 
         function openFiltersSheet() {
             document.getElementById('bottom-sheet-overlay').classList.add('active');
@@ -1104,60 +1152,16 @@
 
         function mobileFilterCategory(category, button) {
             activeCategory = category;
-            
-            const buttons = document.querySelectorAll('.mobile-cat-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-prescot-orange', 'text-white', 'border-prescot-orange', 'shadow-sm');
-                btn.classList.add('bg-gray-50', 'text-gray-600', 'border-gray-200/80');
-            });
-            button.classList.add('bg-prescot-orange', 'text-white', 'border-prescot-orange', 'shadow-sm');
-            button.classList.remove('bg-gray-50', 'text-gray-600', 'border-gray-200/80');
-
-            // Sync desktop cat buttons
-            const desktopButtons = document.querySelectorAll('.filter-btn');
-            desktopButtons.forEach(btn => {
-                const onClickAttr = btn.getAttribute('onclick');
-                if (onClickAttr && onClickAttr.includes("'" + category + "'")) {
-                    btn.classList.add('bg-prescot-orange', 'text-white', 'border-prescot-orange', 'shadow-sm');
-                    btn.classList.remove('bg-gray-50', 'text-gray-600', 'border-gray-200/80');
-                } else if (onClickAttr && onClickAttr.includes(''all'') && category === 'all') {
-                    btn.classList.add('bg-prescot-orange', 'text-white', 'border-prescot-orange', 'shadow-sm');
-                    btn.classList.remove('bg-gray-50', 'text-gray-600', 'border-gray-200/80');
-                } else {
-                    btn.classList.remove('bg-prescot-orange', 'text-white', 'border-prescot-orange', 'shadow-sm');
-                    btn.classList.add('bg-gray-50', 'text-gray-600', 'border-gray-200/80');
-                }
-            });
+            setCategoryButtonState(document.querySelectorAll('.mobile-cat-btn'), category);
+            setCategoryButtonState(document.querySelectorAll('.filter-btn'), category);
 
             applyFilters();
         }
 
         function filterCategory(category, button) {
             activeCategory = category;
-            
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-prescot-orange', 'text-white', 'border-prescot-orange', 'shadow-sm');
-                btn.classList.add('bg-gray-50', 'text-gray-600', 'border-gray-200/80');
-            });
-            button.classList.add('bg-prescot-orange', 'text-white', 'border-prescot-orange', 'shadow-sm');
-            button.classList.remove('bg-gray-50', 'text-gray-600', 'border-gray-200/80');
-
-            // Sync mobile cat buttons
-            const mobileButtons = document.querySelectorAll('.mobile-cat-btn');
-            mobileButtons.forEach(btn => {
-                const onClickAttr = btn.getAttribute('onclick');
-                if (onClickAttr && onClickAttr.includes("'" + category + "'")) {
-                    btn.classList.add('bg-prescot-orange', 'text-white', 'border-prescot-orange', 'shadow-sm');
-                    btn.classList.remove('bg-gray-50', 'text-gray-600', 'border-gray-200/80');
-                } else if (onClickAttr && onClickAttr.includes(''all'') && category === 'all') {
-                    btn.classList.add('bg-prescot-orange', 'text-white', 'border-prescot-orange', 'shadow-sm');
-                    btn.classList.remove('bg-gray-50', 'text-gray-600', 'border-gray-200/80');
-                } else {
-                    btn.classList.remove('bg-prescot-orange', 'text-white', 'border-prescot-orange', 'shadow-sm');
-                    btn.classList.add('bg-gray-50', 'text-gray-600', 'border-gray-200/80');
-                }
-            });
+            setCategoryButtonState(document.querySelectorAll('.filter-btn'), category);
+            setCategoryButtonState(document.querySelectorAll('.mobile-cat-btn'), category);
 
             applyFilters();
         }
@@ -1177,26 +1181,13 @@
         }
 
         function applyFilters() {
-            const isMobile = window.innerWidth < 768;
-            const prefix = isMobile ? 'mobile-' : '';
-            
-            const selectedWidth = document.getElementById(prefix + 'filter-width').value;
-            const selectedWire = document.getElementById(prefix + 'filter-wire').value;
-            const selectedConnector = document.getElementById(prefix + 'filter-connector').value;
-            const selectedConnection = document.getElementById(prefix + 'filter-connection').value;
-
-            // Sync desktop & mobile dropdown selections
-            if (isMobile) {
-                document.getElementById('filter-width').value = selectedWidth;
-                document.getElementById('filter-wire').value = selectedWire;
-                document.getElementById('filter-connector').value = selectedConnector;
-                document.getElementById('filter-connection').value = selectedConnection;
-            } else {
-                document.getElementById('mobile-filter-width').value = selectedWidth;
-                document.getElementById('mobile-filter-wire').value = selectedWire;
-                document.getElementById('mobile-filter-connector').value = selectedConnector;
-                document.getElementById('mobile-filter-connection').value = selectedConnection;
-            }
+            filterRunId++;
+            const currentRunId = filterRunId;
+            cacheFilterOptions();
+            let filters = getCurrentFilters();
+            setFilterValues(filters);
+            filters = recalculateAvailableOptions(filters);
+            setFilterValues(filters);
 
             const sections = document.querySelectorAll('.category-section');
             
@@ -1212,17 +1203,7 @@
                     
                     const rows = box.querySelectorAll('.product-row');
                     rows.forEach(row => {
-                        const rowWidth = row.getAttribute('data-width');
-                        const rowWire = row.getAttribute('data-wire');
-                        const rowConnector = row.getAttribute('data-connector');
-                        const rowConnection = row.getAttribute('data-connection');
-
-                        const matchesWidth = (selectedWidth === 'all' || rowWidth === selectedWidth);
-                        const matchesWire = (selectedWire === 'all' || rowWire === selectedWire);
-                        const matchesConnector = (selectedConnector === 'all' || rowConnector === selectedConnector);
-                        const matchesConnection = (selectedConnection === 'all' || rowConnection === selectedConnection);
-
-                        if (isCatMatch && matchesWidth && matchesWire && matchesConnector && matchesConnection) {
+                        if (isCatMatch && rowMatchesFilters(row, filters)) {
                             row.style.display = '';
                             visibleRowsInBox++;
                             visibleRowsInSection++;
@@ -1248,15 +1229,27 @@
                     sec.style.opacity = '0';
                     sec.style.transform = 'translateY(10px)';
                     setTimeout(() => {
+                        if (currentRunId !== filterRunId) return;
                         sec.style.display = 'none';
                     }, 250);
                 }
             });
-
-            recalculateAvailableOptions(selectedWidth, selectedWire, selectedConnector, selectedConnection);
         }
 
-        function recalculateAvailableOptions(selectedWidth, selectedWire, selectedConnector, selectedConnection) {
+        function rowMatchesFilters(row, filters, ignoredFilter = null) {
+            const checks = {
+                width: row.getAttribute('data-width'),
+                wire: row.getAttribute('data-wire'),
+                connector: row.getAttribute('data-connector'),
+                connection: row.getAttribute('data-connection')
+            };
+
+            return Object.keys(checks).every(key => {
+                return ignoredFilter === key || filters[key] === 'all' || checks[key] === filters[key];
+            });
+        }
+
+        function recalculateAvailableOptions(filters) {
             const rows = Array.from(document.querySelectorAll('.product-row'));
             
             const catMatches = (row) => {
@@ -1265,75 +1258,66 @@
                 return sec && sec.getAttribute('data-category') === activeCategory;
             };
 
-            // 1. Available widths
-            const activeWidths = new Set();
-            rows.forEach(row => {
-                if (catMatches(row) &&
-                    (selectedWire === 'all' || row.getAttribute('data-wire') === selectedWire) &&
-                    (selectedConnector === 'all' || row.getAttribute('data-connector') === selectedConnector) &&
-                    (selectedConnection === 'all' || row.getAttribute('data-connection') === selectedConnection)) {
-                    activeWidths.add(row.getAttribute('data-width'));
-                }
-            });
-            updateSelectOptions('filter-width', activeWidths);
-            updateSelectOptions('mobile-filter-width', activeWidths);
+            let available = null;
+            let changed = false;
 
-            // 2. Available wires
-            const activeWires = new Set();
-            rows.forEach(row => {
-                if (catMatches(row) &&
-                    (selectedWidth === 'all' || row.getAttribute('data-width') === selectedWidth) &&
-                    (selectedConnector === 'all' || row.getAttribute('data-connector') === selectedConnector) &&
-                    (selectedConnection === 'all' || row.getAttribute('data-connection') === selectedConnection)) {
-                    activeWires.add(row.getAttribute('data-wire'));
-                }
-            });
-            updateSelectOptions('filter-wire', activeWires);
-            updateSelectOptions('mobile-filter-wire', activeWires);
+            do {
+                changed = false;
+                available = {
+                    width: new Set(),
+                    wire: new Set(),
+                    connector: new Set(),
+                    connection: new Set()
+                };
 
-            // 3. Available connectors
-            const activeConnectors = new Set();
-            rows.forEach(row => {
-                if (catMatches(row) &&
-                    (selectedWidth === 'all' || row.getAttribute('data-width') === selectedWidth) &&
-                    (selectedWire === 'all' || row.getAttribute('data-wire') === selectedWire) &&
-                    (selectedConnection === 'all' || row.getAttribute('data-connection') === selectedConnection)) {
-                    activeConnectors.add(row.getAttribute('data-connector'));
-                }
-            });
-            updateSelectOptions('filter-connector', activeConnectors);
-            updateSelectOptions('mobile-filter-connector', activeConnectors);
+                Object.keys(available).forEach(filterName => {
+                    rows.forEach(row => {
+                        if (!catMatches(row) || !rowMatchesFilters(row, filters, filterName)) return;
+                        const value = row.getAttribute('data-' + filterName);
+                        if (value && value !== 'all' && value !== 'akcesoria') {
+                            available[filterName].add(value);
+                        }
+                    });
+                });
 
-            // 4. Available connections
-            const activeConnections = new Set();
-            rows.forEach(row => {
-                if (catMatches(row) &&
-                    (selectedWidth === 'all' || row.getAttribute('data-width') === selectedWidth) &&
-                    (selectedWire === 'all' || row.getAttribute('data-wire') === selectedWire) &&
-                    (selectedConnector === 'all' || row.getAttribute('data-connector') === selectedConnector)) {
-                    activeConnections.add(row.getAttribute('data-connection'));
-                }
-            });
-            updateSelectOptions('filter-connection', activeConnections);
-            updateSelectOptions('mobile-filter-connection', activeConnections);
+                Object.keys(available).forEach(filterName => {
+                    if (filters[filterName] !== 'all' && !available[filterName].has(filters[filterName])) {
+                        filters[filterName] = 'all';
+                        changed = true;
+                    }
+                });
+            } while (changed);
+
+            filters.width = updateSelectOptions('filter-width', available.width, filters.width);
+            updateSelectOptions('mobile-filter-width', available.width, filters.width);
+            filters.wire = updateSelectOptions('filter-wire', available.wire, filters.wire);
+            updateSelectOptions('mobile-filter-wire', available.wire, filters.wire);
+            filters.connector = updateSelectOptions('filter-connector', available.connector, filters.connector);
+            updateSelectOptions('mobile-filter-connector', available.connector, filters.connector);
+            filters.connection = updateSelectOptions('filter-connection', available.connection, filters.connection);
+            updateSelectOptions('mobile-filter-connection', available.connection, filters.connection);
+
+            return filters;
         }
 
-        function updateSelectOptions(selectId, activeValues) {
+        function updateSelectOptions(selectId, activeValues, currentValue) {
             const select = document.getElementById(selectId);
-            if (!select) return;
-            const options = select.options;
-            for (let i = 0; i < options.length; i++) {
-                const opt = options[i];
-                if (opt.value === 'all') continue;
-                
-                if (activeValues.has(opt.value)) {
-                    opt.disabled = false;
-                    opt.style.display = '';
-                } else {
-                    opt.disabled = true;
-                    opt.style.display = 'none';
-                }
-            }
+            if (!select) return currentValue;
+
+            const cachedOptions = filterOptionCache[selectId] || [];
+            const nextOptions = cachedOptions.filter(opt => opt.value === 'all' || activeValues.has(opt.value));
+            const nextValue = currentValue === 'all' || activeValues.has(currentValue) ? currentValue : 'all';
+
+            select.innerHTML = '';
+            nextOptions.forEach(optData => {
+                const opt = document.createElement('option');
+                opt.value = optData.value;
+                opt.textContent = optData.text;
+                select.appendChild(opt);
+            });
+            select.value = nextValue;
+
+            return nextValue;
         }
 
         function openLightbox(imgSrc, sku) {
@@ -1361,6 +1345,14 @@
 
         // Attach click events to product thumbs
         document.addEventListener('DOMContentLoaded', function() {
+            const hashTarget = document.getElementById(window.location.hash.replace('#', ''));
+            if (hashTarget && hashTarget.classList.contains('category-section')) {
+                activeCategory = hashTarget.getAttribute('data-category') || 'all';
+                setCategoryButtonState(document.querySelectorAll('.filter-btn'), activeCategory);
+                setCategoryButtonState(document.querySelectorAll('.mobile-cat-btn'), activeCategory);
+            }
+            applyFilters();
+
             const thumbs = document.querySelectorAll('.product-thumb');
             thumbs.forEach(thumb => {
                 const img = thumb.querySelector('img');
