@@ -1227,9 +1227,12 @@
                 btn.classList.toggle('text-white', isActive);
                 btn.classList.toggle('border-prescot-orange', isActive);
                 btn.classList.toggle('shadow-sm', isActive);
-                btn.classList.toggle('bg-gray-50 dark:bg-gray-800', !isActive);
-                btn.classList.toggle('text-gray-600 dark:text-gray-400', !isActive);
-                btn.classList.toggle('border-gray-200 dark:border-gray-700/80', !isActive);
+                btn.classList.toggle('bg-gray-50', !isActive);
+                btn.classList.toggle('dark:bg-slate-800', !isActive);
+                btn.classList.toggle('text-gray-600', !isActive);
+                btn.classList.toggle('dark:text-slate-400', !isActive);
+                btn.classList.toggle('border-gray-200', !isActive);
+                btn.classList.toggle('dark:border-slate-700', !isActive);
             });
         }
 
