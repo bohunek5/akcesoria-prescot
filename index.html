@@ -301,6 +301,9 @@
                 <button onclick="filterCategory('Zasilanie i Rozgałęźniki DC', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold border transition-all duration-200 bg-gray-50 text-gray-600 border-gray-200/80 hover:bg-gray-100 hover:text-gray-900">
                     Kable & Wtyki DC
                 </button>
+                <button onclick="filterCategory('Rozdzielacze mocy', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold border transition-all duration-200 bg-gray-50 text-gray-600 border-gray-200/80 hover:bg-gray-100 hover:text-gray-900">
+                    Rozdzielacze mocy
+                </button>
                 <button onclick="filterCategory('Kable i Szybkozłączki', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold border transition-all duration-200 bg-gray-50 text-gray-600 border-gray-200/80 hover:bg-gray-100 hover:text-gray-900">
                     Złączki Klik & Fast
                 </button>
@@ -348,6 +351,7 @@
                         <option value="hermetyczne">Hermetyczne IP68</option>
                         <option value="skręcane">Skręcane 12-torowe</option>
                         <option value="przełącznik">Przełącznik / Włącznik</option>
+                        <option value="rozdzielacz mocy">Rozdzielacz mocy</option>
                     </select>
                 </div>
                 
@@ -671,8 +675,8 @@
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="15cm" data-connector="akcesoria" data-connection="akcesoria"><td><div class="product-thumb"><img alt="LED-ZIP-M" src="assets/k2018/zip_male.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-M</td><td>5.5/2.1</td><td>15cm</td><td>-</td><td>2x0.50</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="15cm" data-connector="akcesoria" data-connection="akcesoria"><td><div class="product-thumb"><img alt="LED-ZIP-Ż-RGB" src="assets/k2018/zip_rgb_female.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-Ż-RGB</td><td>4 pin</td><td>15cm</td><td>-</td><td>4x0.50</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="15cm" data-connector="akcesoria" data-connection="akcesoria"><td><div class="product-thumb"><img alt="LED-ZIP-M-RGB" src="assets/k2018/zip_rgb_male.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-M-RGB</td><td>4 pin</td><td>15cm</td><td>-</td><td>4x0.50</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="15cm" data-connector="akcesoria" data-connection="akcesoria"><td><div class="product-thumb"><img alt="LED-ZIP-Ż-RGBW" src="assets/k2018/zip_rgb_female.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-Ż-RGBW</td><td>5 pin</td><td>15cm</td><td>-</td><td>5x0.50</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="15cm" data-connector="akcesoria" data-connection="akcesoria"><td><div class="product-thumb"><img alt="LED-ZIP-M-RGBW" src="assets/k2018/zip_rgb_male.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-M-RGBW</td><td>5 pin</td><td>15cm</td><td>-</td><td>5x0.50</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="15cm" data-connector="akcesoria" data-connection="akcesoria"><td><div class="product-thumb"><img alt="LED-ZIP-Ż-RGBW" src="assets/k2018/zip_rgbw_female.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-Ż-RGBW</td><td>5 pin</td><td>15cm</td><td>-</td><td>5x0.50</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="15cm" data-connector="akcesoria" data-connection="akcesoria"><td><div class="product-thumb"><img alt="LED-ZIP-M-RGBW" src="assets/k2018/zip_rgbw_male.png"/></div></td><td class="font-bold text-slate-900">LED-ZIP-M-RGBW</td><td>5 pin</td><td>15cm</td><td>-</td><td>5x0.50</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="15cm" data-connector="gniazdo" data-connection="akcesoria"><td><div class="product-thumb"><img alt="GN-RGB-4PIN15" src="assets/k2018/rgb_gn.png"/></div></td><td class="font-bold text-slate-900">GN-RGB-4PIN15</td><td>4 pin</td><td>15cm</td><td>-</td><td>4x0.35</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="15cm" data-connector="wtyk" data-connection="akcesoria"><td><div class="product-thumb"><img alt="WTYK-RGB-4PIN15" src="assets/k2018/rgb_wtyk_cz.png"/></div></td><td class="font-bold text-slate-900">WTYK-RGB-4PIN15</td><td>4 pin</td><td>15cm</td><td>-</td><td>4x0.35</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="wtyk" data-connection="akcesoria"><td><div class="product-thumb"><img alt="WTYK-RGB-4PIN-B" src="assets/k2018/rgb_wtyk_cz.png"/></div></td><td class="font-bold text-slate-900">WTYK-RGB-4PIN-B</td><td>4 pin</td><td>-</td><td>-</td><td>4x0.35</td></tr>
@@ -744,6 +748,54 @@
         
     </div>
     </div></div></section>
+
+        <section id="rozdzielacze-mocy" data-category="Rozdzielacze mocy" class="category-section py-12 border-b border-gray-100 scroll-mt-24 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-10 border-l-4 border-prescot-orange pl-6">
+                    <h2 class="text-3xl font-extrabold text-gray-900 uppercase tracking-tight">Rozdzielacze mocy</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-10">
+
+    <!-- SERIES BOX -->
+    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-4">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ROZDZIELACZE MOCY LED 5-48V / 25A</h3>
+                <p class="mt-2 text-sm text-slate-500">Rozdzielenie zasilania i sygnału na kilka odcinków taśmy LED.</p>
+            </div>
+            <div class="mt-3 sm:mt-0 text-right">
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">8</span>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px] w-24"></th>
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Nr katalogowy</th>
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Typ LED</th>
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Układ</th>
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Napięcie / prąd</th>
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Wejście</th>
+                            <th class="pb-3 text-gray-400 font-bold uppercase tracking-wider text-[10px]">Wyjście</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="rozdzielacz mocy" data-connection="rozgałęźnik"><td><div class="product-thumb"><img alt="RM-MONO-19" src="assets/k2018/rm_mono_19.png"/></div></td><td class="font-bold text-slate-900">RM-MONO-19</td><td>Mono (2 piny)</td><td>1 wejście / 9 wyjść</td><td>DC 5-48V / 25A</td><td>22-12 AWG / 0,32-4,0 mm²</td><td>24-16 AWG / 0,2-1,5 mm², maks. 10A</td></tr>
+                        <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="rozdzielacz mocy" data-connection="rozgałęźnik"><td><div class="product-thumb"><img alt="RM-CCT-16" src="assets/k2018/rm_cct_16.png"/></div></td><td class="font-bold text-slate-900">RM-CCT-16</td><td>CCT (3 piny)</td><td>1 wejście / 6 wyjść</td><td>DC 5-48V / 25A</td><td>22-12 AWG / 0,32-4,0 mm²</td><td>24-16 AWG / 0,2-1,5 mm², maks. 10A</td></tr>
+                        <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="rozdzielacz mocy" data-connection="rozgałęźnik"><td><div class="product-thumb"><img alt="RM-RGB-14" src="assets/k2018/rm_rgb_14.png"/></div></td><td class="font-bold text-slate-900">RM-RGB-14</td><td>RGB (4 piny)</td><td>1 wejście / 4 wyjścia</td><td>DC 5-48V / 25A</td><td>22-12 AWG / 0,32-4,0 mm²</td><td>24-16 AWG / 0,2-1,5 mm², maks. 10A</td></tr>
+                        <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="rozdzielacz mocy" data-connection="rozgałęźnik"><td><div class="product-thumb"><img alt="RM-RGBW-13" src="assets/k2018/rm_rgbw_13.png"/></div></td><td class="font-bold text-slate-900">RM-RGBW-13</td><td>RGBW (5 pinów)</td><td>1 wejście / 3 wyjścia</td><td>DC 5-48V / 25A</td><td>22-12 AWG / 0,32-4,0 mm²</td><td>24-16 AWG / 0,2-1,5 mm², maks. 10A</td></tr>
+                        <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="rozdzielacz mocy" data-connection="rozgałęźnik"><td><div class="product-thumb"><img alt="RM-RGBCW-13" src="assets/k2018/rm_rgbcw_13.png"/></div></td><td class="font-bold text-slate-900">RM-RGBCW-13</td><td>RGBCW (6 pinów)</td><td>1 wejście / 3 wyjścia</td><td>DC 5-48V / 25A</td><td>22-12 AWG / 0,32-4,0 mm²</td><td>24-16 AWG / 0,2-1,5 mm², maks. 10A</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    </div></div></section>
+
         <section id="kable-i-szybkozlaczki" data-category="Kable i Szybkozłączki" class="category-section py-12 border-b border-gray-100 scroll-mt-24 transition-all duration-300">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-10 border-l-4 border-prescot-orange pl-6">
@@ -758,7 +810,7 @@
                 <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ZŁĄCZKI / SERIA KLIK</h3>
             </div>
             <div class="mt-3 sm:mt-0 text-right">
-                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">8</span>
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">9</span>
             </div>
         </div>
         
@@ -798,7 +850,7 @@
                 <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ZŁĄCZKI / SERIA FAST I LISTWY</h3>
             </div>
             <div class="mt-3 sm:mt-0 text-right">
-                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">9</span>
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">10</span>
             </div>
         </div>
         
@@ -838,12 +890,12 @@
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="10mm" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X10B" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X10B</td><td>10mm</td><td>10mm</td><td>Skręcane</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X16B" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X16B</td><td>16mm</td><td>16mm</td><td>Skręcane</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X25B" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X25B</td><td>25mm</td><td>25mm</td><td>Skręcane</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X2.5P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X2.5P</td><td>2.5mm</td><td>2.5mm</td><td>Skręcane</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X4P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X4P</td><td>4mm</td><td>4mm</td><td>Skręcane</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X6P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X6P</td><td>6mm</td><td>6mm</td><td>Skręcane</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="10mm" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X10P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X10P</td><td>10mm</td><td>10mm</td><td>Skręcane</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X16P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X16P</td><td>16mm</td><td>16mm</td><td>Skręcane</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X25P" src="assets/k2018/listwa_b.png"/></div></td><td class="font-bold text-slate-900">ZL-12X25P</td><td>25mm</td><td>25mm</td><td>Skręcane</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X2.5P" src="assets/k2018/listwa_p.png"/></div></td><td class="font-bold text-slate-900">ZL-12X2.5P</td><td>2.5mm</td><td>2.5mm</td><td>Skręcane</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X4P" src="assets/k2018/listwa_p.png"/></div></td><td class="font-bold text-slate-900">ZL-12X4P</td><td>4mm</td><td>4mm</td><td>Skręcane</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X6P" src="assets/k2018/listwa_p.png"/></div></td><td class="font-bold text-slate-900">ZL-12X6P</td><td>6mm</td><td>6mm</td><td>Skręcane</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="10mm" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X10P" src="assets/k2018/listwa_p.png"/></div></td><td class="font-bold text-slate-900">ZL-12X10P</td><td>10mm</td><td>10mm</td><td>Skręcane</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X16P" src="assets/k2018/listwa_p.png"/></div></td><td class="font-bold text-slate-900">ZL-12X16P</td><td>16mm</td><td>16mm</td><td>Skręcane</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="skręcane" data-connection="akcesoria"><td><div class="product-thumb"><img alt="ZL-12X25P" src="assets/k2018/listwa_p.png"/></div></td><td class="font-bold text-slate-900">ZL-12X25P</td><td>25mm</td><td>25mm</td><td>Skręcane</td></tr>
 
                     </tbody>
                 </table>
@@ -866,7 +918,7 @@
                 <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">PRZYCISKI I WŁĄCZNIKI</h3>
             </div>
             <div class="mt-3 sm:mt-0 text-right">
-                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">10</span>
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">11</span>
             </div>
         </div>
         
@@ -910,7 +962,7 @@
                 <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase">ZŁĄCZKI HERMETYCZNE NA PRZEWÓD</h3>
             </div>
             <div class="mt-3 sm:mt-0 text-right">
-                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">11</span>
+                <span class="text-3xl font-black text-gray-900 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-100 inline-block shadow-sm">12</span>
             </div>
         </div>
         
@@ -925,13 +977,13 @@
                     </thead>
                     <tbody class="divide-y divide-gray-50">
                         <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="150cm" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.381.A2A" src="assets/k2018/thb_381_a.png"/></div></td><td class="font-bold text-slate-900">THB.381.A2A</td><td>wtyk</td><td>2</td><td>0.25-1.5mm2</td><td>IP69K/IP68</td><td>IK06</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="150cm" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.381.B2A" src="assets/k2018/thb_381_a.png"/></div></td><td class="font-bold text-slate-900">THB.381.B2A</td><td>gniazdo</td><td>2</td><td>0.25-1.5mm2</td><td>IP69K/IP68</td><td>IK06</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.A3A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.A3A</td><td>wtyk</td><td>3</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.B3A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.B3A</td><td>gniazdo</td><td>3</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.A4A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.A4A</td><td>wtyk</td><td>4</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.B4A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.B4A</td><td>gniazdo</td><td>4</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="150cm" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.381.B2A" src="assets/k2018/thb_381_b.png"/></div></td><td class="font-bold text-slate-900">THB.381.B2A</td><td>gniazdo</td><td>2</td><td>0.25-1.5mm2</td><td>IP69K/IP68</td><td>IK06</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.A3A" src="assets/k2018/thb_387_a.png"/></div></td><td class="font-bold text-slate-900">THB.387.A3A</td><td>wtyk</td><td>3</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.B3A" src="assets/k2018/thb_387_b.png"/></div></td><td class="font-bold text-slate-900">THB.387.B3A</td><td>gniazdo</td><td>3</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.A4A" src="assets/k2018/thb_387_a.png"/></div></td><td class="font-bold text-slate-900">THB.387.A4A</td><td>wtyk</td><td>4</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.B4A" src="assets/k2018/thb_387_b.png"/></div></td><td class="font-bold text-slate-900">THB.387.B4A</td><td>gniazdo</td><td>4</td><td>0.5-4mm2</td><td>IP66/IP68</td><td>-</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="150cm" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.A5A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.A5A</td><td>wtyk</td><td>5</td><td>0.25-1.5mm2</td><td>IP66/IP68</td><td>-</td></tr>
-<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="150cm" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.B5A" src="assets/k2018/thb_387_a5.png"/></div></td><td class="font-bold text-slate-900">THB.387.B5A</td><td>gniazdo</td><td>5</td><td>0.25-1.5mm2</td><td>IP66/IP68</td><td>-</td></tr>
+<tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="150cm" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.387.B5A" src="assets/k2018/thb_387_b5.png"/></div></td><td class="font-bold text-slate-900">THB.387.B5A</td><td>gniazdo</td><td>5</td><td>0.25-1.5mm2</td><td>IP66/IP68</td><td>-</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.391.A2A" src="assets/k2018/thb_391_a3.png"/></div></td><td class="font-bold text-slate-900">THB.391.A2A</td><td>złączka</td><td>2</td><td>0.5-4mm2</td><td>IP68</td><td>-</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.391.A3A" src="assets/k2018/thb_391_a3.png"/></div></td><td class="font-bold text-slate-900">THB.391.A3A</td><td>złączka</td><td>3</td><td>0.5-4mm2</td><td>IP68</td><td>-</td></tr>
 <tr class="product-row hover:bg-gray-50/50 transition-colors" data-width="all" data-wire="brak" data-connector="hermetyczne" data-connection="akcesoria"><td><div class="product-thumb"><img alt="THB.391.A4A" src="assets/k2018/thb_391_a3.png"/></div></td><td class="font-bold text-slate-900">THB.391.A4A</td><td>złączka</td><td>4</td><td>0.5-4mm2</td><td>IP68</td><td>-</td></tr>
@@ -1012,6 +1064,9 @@
                     <button onclick="mobileFilterCategory('Zasilanie i Rozgałęźniki DC', this)" class="mobile-cat-btn px-3 py-2 rounded-lg text-xs font-bold border transition-all duration-200 bg-gray-50 text-gray-600 border-gray-200/80 hover:bg-gray-100 hover:text-gray-900 text-center">
                         Kable DC
                     </button>
+                    <button onclick="mobileFilterCategory('Rozdzielacze mocy', this)" class="mobile-cat-btn px-3 py-2 rounded-lg text-xs font-bold border transition-all duration-200 bg-gray-50 text-gray-600 border-gray-200/80 hover:bg-gray-100 hover:text-gray-900 text-center">
+                        Rozdzielacze mocy
+                    </button>
                     <button onclick="mobileFilterCategory('Kable i Szybkozłączki', this)" class="mobile-cat-btn px-3 py-2 rounded-lg text-xs font-bold border transition-all duration-200 bg-gray-50 text-gray-600 border-gray-200/80 hover:bg-gray-100 hover:text-gray-900 text-center">
                         Szybkozłączki
                     </button>
@@ -1060,6 +1115,7 @@
                         <option value="hermetyczne">Hermetyczne IP68</option>
                         <option value="skręcane">Skręcane 12-torowe</option>
                         <option value="przełącznik">Przełącznik / Włącznik</option>
+                        <option value="rozdzielacz mocy">Rozdzielacz mocy</option>
                     </select>
                 </div>
                 
