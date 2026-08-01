@@ -5,6 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>PRESCOT LED • Złączki i Akcesoria Instalacyjne • Katalog B2B 2026</title>
+<link href="assets/logo.svg" rel="icon" type="image/svg+xml"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script>
@@ -276,8 +277,206 @@
         .dark .lightbox-close { color: #f3f4f6; }
         .dark .product-row { background: #1f2937; border-color: #374151; }
 
-    
-    
+        /* Product catalogue grid */
+        .catalog-tools {
+            border-bottom: 1px solid #e2e8f0;
+            background: rgba(255, 255, 255, 0.96);
+        }
+        .dark .catalog-tools { border-color: #334155; background: rgba(15, 23, 42, 0.96); }
+        .catalog-tools-inner {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .catalog-result { display: flex; align-items: baseline; gap: 8px; color: #64748b; font-size: 0.85rem; }
+        .catalog-result strong { color: #0f172a; font-family: 'Outfit', sans-serif; font-size: 1.55rem; line-height: 1; }
+        .dark .catalog-result { color: #94a3b8; }.dark .catalog-result strong { color: #f8fafc; }
+        .catalog-search { width: min(460px, 100%); position: relative; }
+        .catalog-search svg { position: absolute; left: 15px; top: 50%; width: 18px; transform: translateY(-50%); color: #94a3b8; pointer-events: none; }
+        .catalog-search input {
+            width: 100%;
+            height: 46px;
+            padding: 0 16px 0 44px;
+            border: 1px solid #cbd5e1;
+            border-radius: 13px;
+            outline: none;
+            color: #0f172a;
+            background: #f8fafc;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: border-color .2s, box-shadow .2s, background .2s;
+        }
+        .catalog-search input:focus { border-color: #E14E26; background: white; box-shadow: 0 0 0 4px rgba(225,78,38,.12); }
+        .dark .catalog-search input { border-color: #334155; color: #f8fafc; background: #1e293b; }
+        .dark .catalog-search input:focus { border-color: #E14E26; background: #172033; }
+
+        @media screen {
+            main { padding-top: 0 !important; }
+            .category-section { padding: 52px 0 !important; }
+            .category-section > .max-w-\[1440px\] { padding-left: 24px !important; padding-right: 24px !important; }
+            .category-section .mb-4.border-l-4 { margin-bottom: 24px; padding-left: 18px; }
+            .category-section .mb-4.border-l-4 h2 { font-size: clamp(1.65rem, 2.2vw, 2.35rem); }
+            .category-section .grid > .bg-white,
+            .category-section .grid > .dark\:bg-slate-900 {
+                padding: 26px !important;
+                border-radius: 22px !important;
+                box-shadow: 0 18px 60px rgba(15,23,42,.07) !important;
+            }
+            .dark .category-section .grid > .bg-white { box-shadow: 0 20px 70px rgba(0,0,0,.24) !important; }
+            .category-section h3 { font-size: clamp(1.4rem, 1.7vw, 2rem) !important; line-height: 1.08; }
+            .category-section h4 { margin: 0 0 14px !important; padding: 0 0 12px !important; font-size: .95rem !important; }
+            .category-section .mb-8 { margin-bottom: 34px !important; }
+            .category-section .mb-8:last-child { margin-bottom: 0 !important; }
+            .overflow-x-auto { overflow: visible !important; }
+            main table { display: block; width: 100% !important; min-width: 0 !important; font-size: inherit !important; }
+            main table thead { display: none !important; }
+            main table tbody {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 16px;
+            }
+            main .product-row {
+                display: flex;
+                min-width: 0;
+                min-height: 410px;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: flex-start;
+                overflow: hidden;
+                border: 1px solid #e2e8f0 !important;
+                border-radius: 17px;
+                color: #334155;
+                background: #fff;
+                box-shadow: 0 8px 24px rgba(15,23,42,.045);
+                transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+            }
+            main .product-row:hover { transform: translateY(-3px); border-color: rgba(225,78,38,.48) !important; box-shadow: 0 16px 34px rgba(15,23,42,.11); }
+            .dark main .product-row { border-color: #334155 !important; color: #cbd5e1; background: #172033; box-shadow: 0 10px 28px rgba(0,0,0,.16); }
+            .dark main .product-row:hover { border-color: rgba(225,78,38,.75) !important; }
+            main .product-row td { width: 100% !important; min-width: 0 !important; border: 0 !important; text-align: left !important; }
+            main .product-row td:first-child {
+                display: block !important;
+                margin: 0 !important;
+                padding: 14px 14px 0 !important;
+            }
+            .product-thumb {
+                width: 100% !important;
+                height: 176px !important;
+                overflow: hidden;
+                border: 0 !important;
+                border-radius: 12px;
+                background: #f8fafc !important;
+                cursor: zoom-in;
+            }
+            .product-thumb img { padding: 16px; border-radius: 12px; object-fit: contain; transform-origin: center; }
+            .product-thumb:hover img { transform: scale(1.035); border: 0; box-shadow: none; }
+            main .product-row td:nth-child(2) {
+                display: block !important;
+                padding: 15px 17px 14px !important;
+                border-bottom: 1px solid #e2e8f0 !important;
+                white-space: normal !important;
+                overflow-wrap: anywhere;
+                color: #0f172a !important;
+                font-family: 'Outfit', sans-serif;
+                font-size: 1rem !important;
+                line-height: 1.22;
+            }
+            .dark main .product-row td:nth-child(2) { border-color: #334155 !important; color: #fff !important; }
+            main .product-row td:nth-child(2) span { display: inline-block; margin-top: 4px; font-family: 'Inter', sans-serif; font-size: .72rem !important; font-weight: 600; color: #94a3b8 !important; }
+            main .product-row td:nth-child(n+3) {
+                display: grid !important;
+                grid-template-columns: minmax(0, 1fr) auto;
+                gap: 12px;
+                align-items: center;
+                padding: 8px 17px !important;
+                font-size: .78rem !important;
+                line-height: 1.25;
+                color: #334155;
+            }
+            .dark main .product-row td:nth-child(n+3) { color: #cbd5e1; }
+            main .product-row td:nth-child(n+3)::before {
+                content: attr(data-label);
+                min-width: 0;
+                color: #94a3b8;
+                font-size: .61rem;
+                font-weight: 800;
+                letter-spacing: .07em;
+                line-height: 1.2;
+                text-transform: uppercase;
+            }
+            main .product-row .spec-value { min-width: 0; text-align: right; overflow-wrap: anywhere; }
+            main .product-row td.source-spec { display: none !important; }
+            main .product-row .product-type-legacy { display: none !important; }
+            main .product-row td.card-specs {
+                display: grid !important;
+                grid-template-columns: minmax(0, 1fr) !important;
+                gap: 0 !important;
+                margin-top: auto;
+                padding: 5px 17px 12px !important;
+            }
+            main .product-row td.card-specs::before { content: none; }
+            .card-spec {
+                min-width: 0;
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) auto;
+                gap: 12px;
+                align-items: center;
+                padding: 7px 0;
+            }
+            .card-spec small {
+                color: #94a3b8;
+                font-size: .61rem;
+                font-weight: 800;
+                letter-spacing: .07em;
+                line-height: 1.2;
+                text-transform: uppercase;
+            }
+            .card-spec strong { color: #334155; font-size: .78rem; font-weight: 600; text-align: right; }
+            .dark .card-spec strong { color: #cbd5e1; }
+        }
+
+        @media screen and (max-width: 1180px) {
+            main table tbody { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+        @media screen and (max-width: 900px) {
+            .catalog-tools-inner { align-items: stretch; flex-direction: column; gap: 14px; padding: 16px; }
+            .catalog-search { width: 100%; }
+            .category-section { padding: 34px 0 !important; }
+            .category-section > .max-w-\[1440px\] { padding-left: 12px !important; padding-right: 12px !important; }
+            .category-section .grid > .bg-white { padding: 16px !important; border-radius: 18px !important; }
+            .overflow-x-auto table tbody { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px; }
+            main .product-row { min-height: 390px; }
+        }
+        @media screen and (max-width: 560px) {
+            .overflow-x-auto table tbody { grid-template-columns: minmax(0, 1fr) !important; }
+            main .product-row { min-height: 0; }
+            .product-thumb { height: 210px !important; }
+            .category-section h3 { font-size: 1.25rem !important; }
+        }
+        @media screen and (max-width: 1024px) {
+            header.sticky {
+                display: block !important;
+                position: sticky;
+                top: 0;
+                padding-top: max(8px, env(safe-area-inset-top));
+            }
+            header.sticky > div {
+                height: 56px;
+                padding-left: max(16px, env(safe-area-inset-left));
+                padding-right: max(16px, env(safe-area-inset-right));
+            }
+            header.sticky a > span { display: none; }
+            header.sticky img { height: 22px !important; }
+            .catalog-tools-inner { padding-top: 18px; }
+        }
+        @media screen and (max-width: 560px) {
+            header.sticky { padding-top: max(30px, env(safe-area-inset-top)); }
+            header.sticky img { height: 19px !important; }
+        }
 
 </style>
 </head>
@@ -398,6 +597,15 @@
 </select>
 </div>
 </div>
+</div>
+</section>
+<section class="catalog-tools no-print">
+<div class="catalog-tools-inner">
+<div class="catalog-result"><strong id="visible-product-count">207</strong><span>produktów w katalogu</span></div>
+<label class="catalog-search" for="catalog-search">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+<input autocomplete="off" id="catalog-search" oninput="applyFilters()" placeholder="Szukaj po symbolu, EAN lub parametrze…" type="search"/>
+</label>
 </div>
 </section>
 <!-- MAIN PRODUCTS -->
@@ -772,27 +980,27 @@
 <tbody class="divide-y divide-gray-50">
 <tr class="product-row border-b border-gray-100 dark:border-slate-800 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors duration-150" data-type="mono"><td class="py-2.5 w-24">
 <div class="w-14 h-14 bg-white border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden flex items-center justify-center p-1">
-<img alt="RM-MONO-19" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='assets/logo.svg';" src="assets/k2018/RM-MONO-19.jpg"/>
+<img alt="RM-MONO-19" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='assets/logo.svg';" src="assets/k2018/rm_mono_19.png"/>
 </div>
 </td><td class="py-2.5 pl-2 font-bold text-slate-900 dark:text-white">RM-MONO-19<br/><span class='text-[10px] text-gray-500'>5905475368301</span><br/><span style="font-size: 0.85em; color: #888;">MONO</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td class="py-2.5 text-gray-500 dark:text-slate-400"><span class="font-semibold text-slate-700 dark:text-slate-300">Wyjście: </span>24-16 AWG / 0,2-1,5 mm², maks. 10A<br/><span class="font-semibold text-slate-700 dark:text-slate-300">Wejście: </span>DC 5-48V / 25A, 22-12 AWG / 0,32-4,0 mm²</td></tr>
 <tr class="product-row border-b border-gray-100 dark:border-slate-800 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors duration-150" data-type="cct"><td class="py-2.5 w-24">
 <div class="w-14 h-14 bg-white border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden flex items-center justify-center p-1">
-<img alt="RM-CCT-16" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='assets/logo.svg';" src="assets/k2018/RM-CCT-16.jpg"/>
+<img alt="RM-CCT-16" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='assets/logo.svg';" src="assets/k2018/rm_cct_16.png"/>
 </div>
 </td><td class="py-2.5 pl-2 font-bold text-slate-900 dark:text-white">RM-CCT-16<br/><span class='text-[10px] text-gray-500'>5905475368318</span><br/><span style="font-size: 0.85em; color: #888;">CCT</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td class="py-2.5 text-gray-500 dark:text-slate-400"><span class="font-semibold text-slate-700 dark:text-slate-300">Wyjście: </span>24-16 AWG / 0,2-1,5 mm², maks. 10A<br/><span class="font-semibold text-slate-700 dark:text-slate-300">Wejście: </span>DC 5-48V / 25A, 22-12 AWG / 0,32-4,0 mm²</td></tr>
 <tr class="product-row border-b border-gray-100 dark:border-slate-800 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors duration-150" data-type="rgb"><td class="py-2.5 w-24">
 <div class="w-14 h-14 bg-white border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden flex items-center justify-center p-1">
-<img alt="RM-RGB-14" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='assets/logo.svg';" src="assets/k2018/RM-RGB-14.jpg"/>
+<img alt="RM-RGB-14" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='assets/logo.svg';" src="assets/k2018/rm_rgb_14.png"/>
 </div>
 </td><td class="py-2.5 pl-2 font-bold text-slate-900 dark:text-white">RM-RGB-14<br/><span class='text-[10px] text-gray-500'>5905475368325</span><br/><span style="font-size: 0.85em; color: #888;">RGB</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td class="py-2.5 text-gray-500 dark:text-slate-400"><span class="font-semibold text-slate-700 dark:text-slate-300">Wyjście: </span>24-16 AWG / 0,2-1,5 mm², maks. 10A<br/><span class="font-semibold text-slate-700 dark:text-slate-300">Wejście: </span>DC 5-48V / 25A, 22-12 AWG / 0,32-4,0 mm²</td></tr>
 <tr class="product-row border-b border-gray-100 dark:border-slate-800 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors duration-150" data-type="rgbw"><td class="py-2.5 w-24">
 <div class="w-14 h-14 bg-white border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden flex items-center justify-center p-1">
-<img alt="RM-RGBW-13" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='assets/logo.svg';" src="assets/k2018/RM-RGBW-13.jpg"/>
+<img alt="RM-RGBW-13" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='assets/logo.svg';" src="assets/k2018/rm_rgbw_13.png"/>
 </div>
 </td><td class="py-2.5 pl-2 font-bold text-slate-900 dark:text-white">RM-RGBW-13<br/><span class='text-[10px] text-gray-500'>5905475368332</span><br/><span style="font-size: 0.85em; color: #888;">RGBW</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td class="py-2.5 text-gray-500 dark:text-slate-400"><span class="font-semibold text-slate-700 dark:text-slate-300">Wyjście: </span>24-16 AWG / 0,2-1,5 mm², maks. 10A<br/><span class="font-semibold text-slate-700 dark:text-slate-300">Wejście: </span>DC 5-48V / 25A, 22-12 AWG / 0,32-4,0 mm²</td></tr>
 <tr class="product-row hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors duration-150" data-type="rgb+cct"><td class="py-2.5 w-24">
 <div class="w-14 h-14 bg-white border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden flex items-center justify-center p-1">
-<img alt="RM-RGBCW-13" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='assets/logo.svg';" src="assets/k2018/RM-RGBCW-13.jpg"/>
+<img alt="RM-RGBCW-13" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='assets/logo.svg';" src="assets/k2018/rm_rgbcw_13.png"/>
 </div>
 </td><td class="py-2.5 pl-2 font-bold text-slate-900 dark:text-white">RM-RGBCW-13<br/><span class='text-[10px] text-gray-500'>5905475368387</span><br/><span style="font-size: 0.85em; color: #888;">RGB+CCT</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td class="py-2.5 text-gray-500 dark:text-slate-400"><span class="font-semibold text-slate-700 dark:text-slate-300">Wyjście: </span>24-16 AWG / 0,2-1,5 mm², maks. 10A<br/><span class="font-semibold text-slate-700 dark:text-slate-300">Wejście: </span>DC 5-48V / 25A, 22-12 AWG / 0,32-4,0 mm²</td></tr>
 </tbody>
@@ -1140,6 +1348,60 @@
         const filterIds = ['filter-type', 'filter-width', 'filter-wire', 'filter-connector', 'filter-connection'];
         const filterOptionCache = {};
 
+        function normalizeCatalogText(value) {
+            return String(value || '')
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .toLowerCase()
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+
+        function formatCatalogSpec(value, type) {
+            if (!value || value === 'all' || value === '-') return 'Uniwersalne';
+            if (value === 'brak') return 'Bez przewodu';
+            if (value === 'akcesoria') return 'Pozostałe';
+            if (type === 'type') return value.toUpperCase();
+            const readable = value.replaceAll('-', ' – ');
+            return readable.charAt(0).toUpperCase() + readable.slice(1);
+        }
+
+        function prepareProductCards() {
+            document.querySelectorAll('main table').forEach(table => {
+                table.querySelectorAll('tbody .product-row').forEach(row => {
+                    const cells = Array.from(row.children);
+                    const imageFrame = cells[0] ? cells[0].querySelector('div') : null;
+                    const productImage = cells[0] ? cells[0].querySelector('img') : null;
+                    if (imageFrame && productImage) imageFrame.classList.add('product-thumb');
+                    cells.slice(2).forEach(cell => cell.classList.add('source-spec'));
+                    const titleSpans = cells[1] ? cells[1].querySelectorAll(':scope > span') : [];
+                    if (titleSpans[0]) titleSpans[0].classList.add('product-ean');
+                    if (titleSpans[1]) titleSpans[1].classList.add('product-type-legacy');
+
+                    const specs = [
+                        ['Typ LED', formatCatalogSpec(row.dataset.type, 'type')],
+                        ['Szerokość', formatCatalogSpec(row.dataset.width, 'width')],
+                        ['Połączenie', formatCatalogSpec(row.dataset.connection, 'connection')],
+                        ['Rodzaj złącza', formatCatalogSpec(row.dataset.connector, 'connector')],
+                        ['Przewód', formatCatalogSpec(row.dataset.wire, 'wire')]
+                    ];
+                    const specsCell = document.createElement('td');
+                    specsCell.className = 'card-specs';
+                    specs.forEach(([label, value]) => {
+                        const item = document.createElement('span');
+                        item.className = 'card-spec';
+                        const name = document.createElement('small');
+                        name.textContent = label;
+                        const reading = document.createElement('strong');
+                        reading.textContent = value;
+                        item.append(name, reading);
+                        specsCell.appendChild(item);
+                    });
+                    row.appendChild(specsCell);
+                });
+            });
+        }
+
         function cacheFilterOptions() {
             [...filterIds, ...filterIds.map(id => 'mobile-' + id)].forEach(id => {
                 const select = document.getElementById(id);
@@ -1230,6 +1492,7 @@
             document.getElementById('filter-connection').value = 'all';
             if(document.getElementById('filter-type')) document.getElementById('filter-type').value = 'all';
             if(document.getElementById('mobile-filter-type')) document.getElementById('mobile-filter-type').value = 'all';
+            if(document.getElementById('catalog-search')) document.getElementById('catalog-search').value = '';
 
             applyFilters();
         }
@@ -1244,6 +1507,7 @@
             setFilterValues(filters);
 
             const sections = document.querySelectorAll('.category-section');
+            let visibleProducts = 0;
             
             sections.forEach(sec => {
                 const secCat = sec.getAttribute('data-category');
@@ -1261,6 +1525,7 @@
                             row.style.display = '';
                             visibleRowsInBox++;
                             visibleRowsInSection++;
+                            visibleProducts++;
                         } else {
                             row.style.display = 'none';
                         }
@@ -1288,6 +1553,17 @@
                     }, 250);
                 }
             });
+
+            document.querySelectorAll('.category-section .grid > div').forEach(series => {
+                const visibleInSeries = Array.from(series.querySelectorAll('.product-row')).filter(row => row.style.display !== 'none').length;
+                const badge = series.firstElementChild ? series.firstElementChild.querySelector('span') : null;
+                if (badge) {
+                    badge.textContent = visibleInSeries;
+                    badge.setAttribute('aria-label', `${visibleInSeries} produktów w serii`);
+                }
+            });
+            const visibleCount = document.getElementById('visible-product-count');
+            if (visibleCount) visibleCount.textContent = visibleProducts;
         }
 
         function rowMatchesFilters(row, filters, ignoredFilter = null) {
@@ -1299,7 +1575,11 @@
                 type: row.getAttribute('data-type')
             };
 
-            return Object.keys(checks).every(key => {
+            const query = normalizeCatalogText(document.getElementById('catalog-search')?.value);
+            const searchable = normalizeCatalogText(`${row.textContent} ${Object.values(checks).join(' ')}`);
+            const matchesSearch = !query || searchable.includes(query);
+
+            return matchesSearch && Object.keys(checks).every(key => {
                 return ignoredFilter === key || filters[key] === 'all' || checks[key] === filters[key];
             });
         }
@@ -1403,6 +1683,7 @@
 
         // Attach click events to product thumbs
         document.addEventListener('DOMContentLoaded', function() {
+            prepareProductCards();
             const hashTarget = document.getElementById(window.location.hash.replace('#', ''));
             if (hashTarget && hashTarget.classList.contains('category-section')) {
                 activeCategory = hashTarget.getAttribute('data-category') || 'all';
