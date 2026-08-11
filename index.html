@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="data.js"></script>
 
   <script>
     tailwind.config = {
@@ -485,9 +486,12 @@
     // FETCH CATALOG JSON DATA
     async function fetchCatalogData() {
       try {
-        const resp = await fetch('./products_data.min.json');
-        if (!resp.ok) throw new Error('Nie udało się pobrać bazy danych');
-        const data = await resp.json();
+        let data = window.CATALOG_DATA;
+        if (!data) {
+          const resp = await fetch('./products_data.min.json');
+          if (!resp.ok) throw new Error('Nie udało się pobrać bazy danych');
+          data = await resp.json();
+        }
         
         state.allProducts = data.products || [];
         state.categoriesTree = data.categories || {};

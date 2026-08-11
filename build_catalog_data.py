@@ -2,7 +2,7 @@
 """
 PRESCOT XML Catalog Processor
 Fetches https://prescot.wapromag.pl/prescotcloud.xml and converts Prescot products
-into a high-performance JSON structure for the web catalog.
+into high-performance JSON and data.js structures for the web catalog.
 """
 
 import urllib.request
@@ -105,11 +105,19 @@ def build_catalog():
         'products': products
     }
 
-    out_file = os.path.join(os.path.dirname(__file__), 'products_data.min.json')
-    with open(out_file, 'w', encoding='utf-8') as f:
-        json.dump(output, f, ensure_ascii=False, separators=(',', ':'))
+    base_dir = os.path.dirname(__file__)
+    out_file_json = os.path.join(base_dir, 'products_data.min.json')
+    out_file_js = os.path.join(base_dir, 'data.js')
 
-    print(f"Pomyślnie wygenerowano {out_file} z {len(products)} produktami PRESCOT.")
+    json_str = json.dumps(output, ensure_ascii=False, separators=(',', ':'))
+
+    with open(out_file_json, 'w', encoding='utf-8') as f:
+        f.write(json_str)
+
+    with open(out_file_js, 'w', encoding='utf-8') as f:
+        f.write('window.CATALOG_DATA = ' + json_str + ';')
+
+    print(f"Pomyślnie wygenerowano {out_file_json} oraz {out_file_js} z {len(products)} produktami PRESCOT.")
 
 if __name__ == '__main__':
     build_catalog()
