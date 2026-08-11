@@ -1,0 +1,6 @@
+ceneo.xml
+products_data.json
+*.backup
+*.pyc
+__pycache__/
+.DS_Store
