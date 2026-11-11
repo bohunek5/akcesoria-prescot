@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; worker-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <title>Podgląd chroniony hasłem</title>
+  <link rel="stylesheet" href="/akcesoria-prescot/__gate/gate.css">
+  <script src="/akcesoria-prescot/__gate/gate.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="symbol" aria-hidden="true">&#128274;</div>
+    <h1>Podgląd chroniony hasłem</h1>
+    <p>Wpisz hasło, aby otworzyć stronę.</p>
+    <form id="gate-form">
+      <label for="gate-password">Hasło dostępu</label>
+      <input id="gate-password" type="password" autocomplete="current-password" required autofocus>
+      <button id="gate-submit" type="submit" disabled>Otwórz stronę</button>
+      <p id="gate-status" role="status" aria-live="polite">Przygotowywanie bezpiecznego podglądu…</p>
+    </form>
+    <noscript>Do otwarcia strony potrzebna jest obsługa JavaScript.</noscript>
+  </main>
+</body>
+</html>
